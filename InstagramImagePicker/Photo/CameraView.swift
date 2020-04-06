@@ -122,7 +122,7 @@ class CameraView: UIView {
         shootButton.centerXAnchor.constraint(equalTo: hudContainerView.centerXAnchor).isActive = true
         shootButton.centerYAnchor.constraint(equalTo: hudContainerView.centerYAnchor).isActive = true
         
-        let image = UIImage(named: cameraMode == .photo ? "photo_capture" : "video_capture")?.withRenderingMode(.alwaysOriginal)
+        let image = UIImage(named: cameraMode == .photo ? "photo_capture" : "video_recording_start")?.withRenderingMode(.alwaysOriginal)
         shootButton.setImage(image, for: .normal)
         
         if cameraMode == .photo {

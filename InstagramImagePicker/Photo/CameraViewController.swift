@@ -77,6 +77,8 @@ class CameraViewController: UIViewController, PermissionCheckable {
     }
 }
 
+// MARK: - CameraViewDelegate
+
 extension CameraViewController: CameraViewDelegate {
     
     func didFlip() {

@@ -136,7 +136,7 @@ class PhotoCaptureManager: NSObject {
         }
     }
     
-    private func flip() {
+    fileprivate func flip() {
         // Reset inputs
         session.inputs.forEach { (input) in
             self.session.removeInput(input)

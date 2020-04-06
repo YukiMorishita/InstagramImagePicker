@@ -52,6 +52,7 @@ class RootViewController: UIViewController {
         
         let navVC = UINavigationController(rootViewController: pickerVC)
         navVC.modalPresentationStyle = .fullScreen
+        navVC.navigationBar.barTintColor = .white
         navVC.navigationBar.tintColor = .black
         navVC.navigationBar.isTranslucent = false
         

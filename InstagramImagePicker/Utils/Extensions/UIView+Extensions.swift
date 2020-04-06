@@ -38,4 +38,28 @@ extension UIView {
             self.heightAnchor.constraint(equalToConstant: height).isActive = true
         }
     }
+    
+    func fillSuperview(insets: UIEdgeInsets = .zero) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        
+        guard let superview = self.superview else {
+            return
+        }
+        
+        topAnchor.constraint(equalTo: superview.topAnchor, constant: insets.top).isActive = true
+        leftAnchor.constraint(equalTo: superview.leftAnchor, constant: insets.left).isActive = true
+        bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -insets.bottom).isActive = true
+        rightAnchor.constraint(equalTo: superview.rightAnchor, constant: -insets.right).isActive = true
+    }
+    
+    func centerInSuperview() {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        
+        guard let superview = self.superview else {
+            return
+        }
+        
+        centerXAnchor.constraint(equalTo: superview.centerXAnchor).isActive = true
+        centerYAnchor.constraint(equalTo: superview.centerYAnchor).isActive = true
+    }
 }

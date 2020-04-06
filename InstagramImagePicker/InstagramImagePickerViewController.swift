@@ -69,17 +69,14 @@ class InstagramImagePickerViewController: BottomNavigation {
             case .library:
                 libraryVc = LibraryViewController()
                 libraryVc?.title = "Library"
-                libraryVc?.view.backgroundColor = .red
                 vcs.append(libraryVc!)
             case .photo:
                 cameraVc = CameraViewController()
                 cameraVc?.title = "Photo"
-                cameraVc?.view.backgroundColor = .blue
                 vcs.append(cameraVc!)
             case .video:
                 videoVc = VideoViewController()
                 videoVc?.title = "Video"
-                videoVc?.view.backgroundColor = .yellow
                 vcs.append(videoVc!)
             }
         }
@@ -116,6 +113,7 @@ class InstagramImagePickerViewController: BottomNavigation {
         
         let textLabel = UILabel()
         textLabel.text = title
+        textLabel.textColor = .black
         textLabel.font = UIFont.boldSystemFont(ofSize: 17)
         
         if let navBarTitleFont = UINavigationBar.appearance().titleTextAttributes?[.font] as? UIFont {
